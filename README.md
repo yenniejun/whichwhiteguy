@@ -7,15 +7,15 @@ I get the short stories (at random, for now, so not the best method) from severa
 from the 19th and 20th centuries using the [Gutenberg API](https://github.com/c-w/gutenberg/).
 
 Currently the authors I'm using are:
-	* Nathaniel Hawthorne
-	* Edgar Allan Poe
-	* Oscar Wilde
-	* H. G. Wells
-	* Mark Twain
-	* Leo Tolstoy
-	* Rudyard Kipling
-	* Thomas Hardy
-	* Arthur Conan Doyle
+* Nathaniel Hawthorne
+* Edgar Allan Poe
+* Oscar Wilde
+* H. G. Wells
+* Mark Twain
+* Leo Tolstoy
+* Rudyard Kipling
+* Thomas Hardy
+* Arthur Conan Doyle
 
 ## Things to improve:
  * Chunking of texts. Right now I'm just getting 1000-word long chunks for each
