@@ -22,6 +22,7 @@ df.to_csv('text_chunks.csv', sep=',', na_rep='NaN')
 
 ############### Methods ##################
 
+# Note: These texts are all randomly chosen
 def get_text_dictionary():
 	hawthorne = get_text_from_gutenberg(512)
 	poe = get_text_from_gutenberg(25525)
@@ -52,10 +53,9 @@ def get_text_from_gutenberg(index):
 
 
 def get_text_chunk_df(author, text):
-	text_len = len(text)
 	temp_df = pd.DataFrame([], columns=(AUTHOR, TEXT_CHUNK))
-	for i in range(0, text_len, CHUNK_SIZE):
-		# Save to pandas df
-		text_chunk = " ".join(text[i:i+(CHUNK_SIZE-1)])
+	for i in range(0, len(text), CHUNK_SIZE):
+		# I want to have one string, not an array of each individual word
+		text_chunk = " ".join(text[i:i+(CHUNK_SIZE-1)]) 
 		temp_df = temp_df.append(pd.DataFrame([[author, text_chunk]], columns=(AUTHOR, TEXT_CHUNK)))
 	return temp_df
